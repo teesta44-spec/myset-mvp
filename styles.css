@@ -1,0 +1,11 @@
+
+:root { --bg:#0a0b10; --fg:#e6f1ff; --muted:#8aa1b1; --cyan:#00e5ff; --pink:#ff2fb9 }
+*{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui, sans-serif}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+.hero{min-height:50vh;display:grid;place-items:center;background:
+ radial-gradient(1000px 500px at 50% -10%, rgba(255,47,185,.12), transparent),
+ radial-gradient(800px 400px at 50% 110%, rgba(0,229,255,.12), transparent)}
+.logo{font-size:clamp(40px,10vw,100px);letter-spacing:.06em;text-transform:uppercase}
+.button{display:inline-block;padding:10px 14px;border:1px solid rgba(255,255,255,.15);border-radius:10px;text-decoration:none;color:var(--fg)}
+.now-playing{border:1px solid rgba(0,229,255,.35);padding:12px;border-radius:14px}
+.video-frame{aspect-ratio:16/9;background:#111;border:1px solid rgba(255,255,255,.14);border-radius:12px;overflow:hidden}
