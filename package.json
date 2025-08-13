@@ -1,13 +1,15 @@
 {
-  "name": "myset-mvp",
+  "name": "my-set",
   "version": "1.0.0",
-  "description": "My Set — MVP (Docker-free)",
-  "main": "Server.js",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "start": "node Server.js"
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "socket.io": "^4.7.2"
+    "express": "^4.19.2",
+    "compression": "^1.7.4",
+    "helmet": "^7.1.0"
   }
 }

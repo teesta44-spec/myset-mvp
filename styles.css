@@ -1,7 +1,25 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #111;
-  color: #fff;
-  text-align: center;
-  padding: 50px;
-}
+:root{ --bg:#0b0b12; --card:#141423; --text:#e6e6f0; --muted:#9aa0b4; --accent:#7cffd4; --accent2:#ff46c0; }
+*{box-sizing:border-box}
+html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,'Noto Sans','Apple Color Emoji','Segoe UI Emoji'; }
+.container{ max-width:1100px; margin:auto; padding:1rem; }
+.logo{ font-size:2rem; font-weight:900; }
+.logo span{ color:var(--accent2); }
+.tagline{ color:var(--muted); margin-top:0.25rem; }
+.grid{ display:grid; grid-template-columns:2fr 1fr; gap:1rem; }
+.card{ background:var(--card); border-radius:1rem; padding:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.4); }
+.player{ background:#000; aspect-ratio:16/9; position:relative; border-radius:0.5rem; overflow:hidden; }
+.player video{ width:100%; height:100%; display:block; }
+.player .placeholder{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:var(--muted); }
+.actions{ margin-top:0.5rem; display:flex; gap:0.5rem; }
+.button,button{ background:var(--accent); color:#000; font-weight:bold; border:none; padding:0.5rem 1rem; border-radius:0.5rem; cursor:pointer; text-decoration:none; }
+.button:hover,button:hover{ opacity:0.9; }
+.hint{ font-size:0.85rem; color:var(--muted); margin-top:0.5rem; }
+.chat{ display:flex; flex-direction:column; height:100%; }
+.messages{ flex:1; overflow-y:auto; background:#0e0e18; padding:0.5rem; border-radius:0.5rem; margin-bottom:0.5rem; }
+.message{ background:var(--card); padding:0.4rem 0.6rem; border-radius:0.5rem; margin-bottom:0.25rem; }
+.message.mine{ background:var(--accent2); color:#fff; align-self:flex-end; }
+.chat-form{ display:flex; gap:0.5rem; }
+.chat-form input{ flex:1; padding:0.5rem; border-radius:0.5rem; border:none; }
+.chat-form button{ background:var(--accent2); color:#fff; }
+footer{ margin-top:2rem; text-align:center; color:var(--muted); }
+.small{ font-size:0.85rem; }
