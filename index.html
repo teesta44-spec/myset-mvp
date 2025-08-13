@@ -7,28 +7,31 @@
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <header class="container">
-    <h1 class="logo">My<span>Set</span></h1>
+  <header class="container header">
+    <a class="logo" href="./">My<span>Set</span></a>
+    <nav class="nav">
+      <a class="active" href="./">Home</a>
+      <a href="./live.html">Live Sets</a>
+    </nav>
     <p class="tagline">Go live. Drop heat. Get tipped.</p>
   </header>
+
+  <section class="hero" style="--hero:url('https://picsum.photos/id/1011/1600/900');">
+    <div class="hero-inner container">
+      <h2 class="hero-title">Live DJ energy. Right here.</h2>
+      <p class="hero-sub">Watch sets, chat live, tip your favorites.</p>
+    </div>
+  </section>
+
   <main class="container grid">
     <section class="card">
-      <h2>Live Stream</h2>
-      <div class="player">
-        <video id="player" controls playsinline>
-          <source src="" type="application/x-mpegURL">
-        </video>
-        <div class="placeholder">Your stream will appear here</div>
-      </div>
-      <div class="actions">
-        <button disabled title="Coming soon">Go Live (coming soon)</button>
-        <a id="donate" class="button" href="#" target="_blank" rel="noopener">Donate via Stripe</a>
-      </div>
-      <p class="hint">
-        This MVP serves a static page on Render. When you're ready, we'll wire this up to a real stream
-        and Stripe Checkout.
-      </p>
+      <h2>Featured Set</h2>
+      <video class="feature-video" controls playsinline>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      </video>
+      <p class="hint">Swap this MP4 with your house set video when ready.</p>
     </section>
+
     <aside class="card chat">
       <h2>Chat</h2>
       <div id="messages" class="messages"></div>
@@ -38,9 +41,20 @@
       </form>
     </aside>
   </main>
+
+  <section class="container">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://picsum.photos/id/1005/600/400" alt="Crowd 1">
+      <img src="https://picsum.photos/id/1025/600/400" alt="Crowd 2">
+      <img src="https://picsum.photos/id/1016/600/400" alt="Crowd 3">
+    </div>
+  </section>
+
   <footer class="container small">
     <p>© <span id="year"></span> My Set. All rights reserved.</p>
   </footer>
+
   <script>
     const form = document.getElementById('chat-form');
     const input = document.getElementById('chat-input');
